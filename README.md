@@ -21,17 +21,13 @@ Fairly simple challenge that I will use to explore concepts that are not so simp
 
 ### Screenshot
 
-<!-- <img src="./assets/images/Desktop_Screenshot.png" width="600"> -->
+<img src="./images/Desktop_Screenshot.png" width="600">
 
 ## My process
 
 I will be starting with a mobile-first approach to this project and build out the mobile design before shifting to accomodate the desktop view. Don't anticipate too much trouble with this project nor will I particularly emphasize any pixel perfect goalset here, as last project was quite time consuming for it and this is largely review at this time.
 
 Ideally I would like to leverage some of the skills being taught in this course. First, I have mixed messaging on setting font to 62.5% to make for simple rems. Some say do it, some say it impact people with accessibility issues. I'm going to err on the side of caution and assume that this truly does impact people with accessibility limitations and I will bite the bullet and just do my 1.6 math the old fashioned way like the pioneers. 
-
-Additionally, I love the recomendation of using clamp to scale font size and I am going to play around with that approach in this project.
-
-I am going to be exploring scss. I have been learning vanilla css up until now and not considering alternatives like scss, but I think I'm already struggling with css bloat in my work projects, so it's time to start explowing this tool out of necessity. 50/50 I leverage it in this one.
 
 ### Built with
 
@@ -42,10 +38,11 @@ I am going to be exploring scss. I have been learning vanilla css up until now a
 
 ### What I learned
 
+Top source of new experience was the `<picture>` tag and its role in logic-based delivery purely in html. Was not aware of this capacity in the markup language and found it really neat to work with, albeit I want more practice.
 
 ### Continued development
 
-
+I would like to redo this project in scss, but for now I will move on. Additionally, I would like to reapproach this sort of project with clamp fonts. 
 
 ## Author
 
