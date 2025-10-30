@@ -45,6 +45,10 @@ picture, img {
     height: auto;
 }
 
+img {
+    height: 100%;
+}
+
 section {
     padding: var(--padding-xl);
     display: flex;
@@ -158,9 +162,6 @@ button > img {
   line-height: 120%;
   letter-spacing: 0rem;
 }
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
 
 @media screen and (width > 48rem) {
     body {
