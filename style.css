@@ -52,6 +52,12 @@ section {
     gap: var(--padding-l);
 }
 
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-l);
+}
+
 h1, h3 {
     color: var(--grey);
 }
@@ -167,6 +173,7 @@ button > img {
     }
     section {
         width: 50%;
+        gap: var(--padding-xl);
     }
 }
 
