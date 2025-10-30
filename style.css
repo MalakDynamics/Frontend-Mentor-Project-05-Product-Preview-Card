@@ -170,6 +170,7 @@ button > img {
         margin-top: 0;
         flex-direction: row;
         width: 600px;
+        height: fit-content;
     }
     picture {
         width: 50%;
