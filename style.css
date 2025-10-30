@@ -78,7 +78,7 @@ section {
     gap: var(--spacing-3);
 }
 
-price-current {
+.price-current {
     color: var(--light-green);
 }
 
