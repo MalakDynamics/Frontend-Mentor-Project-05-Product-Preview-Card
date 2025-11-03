@@ -93,7 +93,6 @@ body {
 .product__header {
     display: flex;
     flex-direction: column;
-    text-wrap: balance;
     gap: var(--spacing-4);
     gap: clamp(0.75rem, -2.25rem + 17.142857142857142vw, var(--spacing-4));
 }
@@ -104,6 +103,7 @@ body {
 
 .product__title {
     color: var(--black);
+    text-wrap: balance;
 }
 
 .product__pricebox {
@@ -223,7 +223,6 @@ footer a {
     .product__header {
         display: flex;
         flex-direction: column;
-        text-wrap: wrap;
         gap: var(--spacing-4);
     }
     .main__picture {
