@@ -1,4 +1,27 @@
-
+/* fraunces-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/fraunces-v38-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/montserrat-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 :root {
     --black: #1C232B;
@@ -17,22 +40,28 @@
     --spacing-1: 0.25rem;
 }
 
-* {
+*, 
+*::before, 
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--cream);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-main {
+
+.main {
+    margin: 0 var(--spacing-2);
     margin-top: var(--spacing-7);
-    width: 350px;
+    max-width: 21.875rem;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -40,54 +69,56 @@ main {
     overflow: hidden;
 }
 
-picture { 
+.main__picture { 
     display: block; 
     width: 100%; 
 }
 
-picture img { 
+.main__picture .main__image { 
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
 }
 
-section {
+.product {
     padding: var(--spacing-5);
+    padding: clamp(1rem, -3rem + 22.857142857142858vw, 2rem);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-4);
 }
 
-.text-container {
+.product__header {
     display: flex;
     flex-direction: column;
+    text-wrap: balance;
     gap: var(--spacing-4);
 }
 
-.product-category, .product-description {
+.product__type, .product__description {
     color: var(--grey);
 }
 
-.product-title {
+.product__title {
     color: var(--black);
 }
 
-.price-container {
+.product__pricebox {
     display: flex;
     align-items: center;
     gap: var(--spacing-3);
 }
 
-.price-current {
+.product__price-current {
     color: var(--light-green);
 }
 
-.price-original {
+.product__price-original {
     text-decoration: line-through;
     color: var(--grey)
 }
 
-button {
+.product__button {
     border-radius: var(--spacing-2);
     padding: var(--spacing-3) var(--spacing-5);
     border: none;
@@ -100,12 +131,12 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.product__button:hover {
     background-color: var(--dark-green);
     cursor: pointer;
 }
 
-button > img {
+.product__button > .product__button-icon {
     height: auto;
     width: auto;
 }
@@ -113,79 +144,62 @@ button > img {
 .fraunces-bold, .montserrat-bold,
 .montserrat-medium, .montserrat-medium-spaced,
 .montserrat-medium-spaced-sub {
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 .montserrat-bold,
 .montserrat-medium, .montserrat-medium-spaced,
 .montserrat-medium-spaced-sub {
-  font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .fraunces-bold {
-  font-family: "Fraunces", serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 100%;
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    font-size: clamp(1.5rem, -2rem + 20vw, 2rem);
+    font-weight: 700;
+    line-height: 100%;
 }
 
 .montserrat-bold {
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 110%;
-  letter-spacing: 0rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    font-size: clamp(0.65625rem, -0.8750000000000002rem + 8.75vw, 0.875rem);
+    line-height: 110%;
+    letter-spacing: 0rem;
 }
 
 .montserrat-medium {
-  font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 160%;
-  letter-spacing: 0rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    font-size: clamp(0.65625rem, -0.8750000000000002rem + 8.75vw, 0.875rem);
+    line-height: 160%;
+    letter-spacing: 0rem;
 }
 
 .montserrat-medium-spaced {
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 120%;
-  letter-spacing: 0.3125rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    font-size: clamp(0.5625rem, -0.7500000000000002rem + 7.500000000000001vw, 0.75rem);
+    line-height: 120%;
+    letter-spacing: 0.3125rem;
 }
 
 .montserrat-medium-spaced-sub {
-  font-weight: 500;
-  font-size: 0.8125rem;
-  line-height: 120%;
-  letter-spacing: 0rem;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    font-size: clamp(0.609375rem, -0.8125rem + 8.125vw, 0.8125rem);
+    line-height: 120%;
+    letter-spacing: 0rem;
 }
-
-@media screen and (min-width: 768px) {
-    body {
-        justify-content: center;
-    }
-    main {
-        margin-top: 0;
-        flex-direction: row;
-        width: 600px;
-    }
-    picture {
-        width: 50%;
-    }
-    img {
-        height: 100%;
-    }
-    section {
-        width: 50%;
-        gap: var(--spacing-5);
-    }
-}
-
 footer { 
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 11px;
-    padding: 8px 0;
+    font-size: 0.6875rem;
+    padding: 0.5rem 0;
     background: transparent;
     pointer-events: none;
 }
@@ -194,3 +208,33 @@ footer a {
     pointer-events: auto;
     color: hsl(228, 45%, 44%); 
 }
+@media screen and (min-width: 48rem) {
+    body {
+        justify-content: center;
+    }
+    .main {
+        margin: 0;
+        flex-direction: row;
+        max-width: 37.5rem;
+    }
+    .product__header {
+        display: flex;
+        flex-direction: column;
+        text-wrap: wrap;
+        gap: var(--spacing-4);
+    }
+    .main__picture {
+        width: 50%;
+    }
+    .main__image {
+        height: 100%;
+    }
+    .product {
+        width: 50%;
+        gap: var(--spacing-5);
+    }
+    footer {
+        position: absolute;
+    }
+}
+

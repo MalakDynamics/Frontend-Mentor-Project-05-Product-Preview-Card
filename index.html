@@ -2,35 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="./fonts/fraunces-v38-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/montserrat-v31-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <title>Frontend Mentor | Product preview card component</title>
 </head>
 <body>
-  <main>
-    <picture>
+  <main class="main">
+    <picture class="main__picture">
       <source media="(min-width: 768px)" srcset="images/image-product-desktop.jpg">
-      <img src="images/image-product-mobile.jpg" alt="bottle of perfume">
+      <img class="main__image" src="images/image-product-mobile.jpg" alt="">
     </picture>
-    <section>
-      <div class="text-container">
-        <p class="montserrat-medium-spaced product-category">PERFUME</p>
-        <h1 class="fraunces-bold product-title">Gabrielle Essence Eau De Parfum</h1>
-        <p class="montserrat-medium product-description">
+    <section class="product">
+      <header class="product__header">
+        <p class="montserrat-medium-spaced product__type">PERFUME</p>
+        <h1 class="fraunces-bold product__title">Gabrielle Essence Eau De Parfum</h1>
+        <p class="montserrat-medium product__description">
             A floral, solar and voluptuous interpretation composed by Olivier Polge, 
       Perfumer-Creator for the House of CHANEL.
         </p>
+      </header>
+      <div class="product__pricebox">
+        <span class="fraunces-bold product__price-current">$149.99</span>
+        <span class="montserrat-medium-spaced-sub product__price-original">$169.99</span>
       </div>
-      <div class="price-container">
-        <span class="fraunces-bold price-current">$149.99</span>
-        <span class="montserrat-medium-spaced-sub price-original">$169.99</span>
-      </div>
-      <button type="button" class="montserrat-bold">
-        <img src="images/icon-cart.svg" alt="" aria-hidden="true">
+      <button type="button" class="montserrat-bold product__button">
+        <img class="product__button-icon" src="images/icon-cart.svg" alt="" width="15" height="16">
         Add to Cart
       </button>
     </section>
