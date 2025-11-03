@@ -34,7 +34,6 @@ Ideally I would like to leverage some of the skills being taught in this course.
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- SCSS (?)
 
 ### What I learned
 
@@ -42,7 +41,7 @@ Top source of new experience was the `<picture>` tag and its role in logic-based
 
 ### Continued development
 
-I would like to redo this project in scss, but for now I will move on. Additionally, I would like to reapproach this sort of project with clamp fonts. 
+Update - 11/3/25: Based on feedback, modified with internal font resources with preload values included to prevent flash of unstyled text, added more BEM-aligned classes to tags, and began exploring clamp mechanics for both font and margins. Mobile scaled down to support for 17.5rem vw. 
 
 ## Author
 
